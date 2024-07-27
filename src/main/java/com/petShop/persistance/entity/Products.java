@@ -16,12 +16,11 @@ public class Products {
     @Column(name = "nombre")
     private String name;
 
-    @Column(name = "")
+    @Column(name = "cantidad")
+    private int quantity;
 
+    @Column(name = "fechaIngreso")
+    private String dateOfEntry;
 
-    @Column(name = "")
-
-
-    @Column(name = "")
 
 }

@@ -3,7 +3,8 @@ package com.petShop.persistance.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.security.PrivateKey;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "propietario" )
@@ -11,7 +12,7 @@ public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_propirtario")
+    @Column(name = "id_propietario")
     private int id;
 
     @Column(name = "nombres")
@@ -29,7 +30,8 @@ public class Owner {
     @Column(name = "direccion")
     private String address;
 
-    // getters and setters
+    @OneToMany(mappedBy = "Owner")
+    private List<Pet> pets;
 
 
 }
