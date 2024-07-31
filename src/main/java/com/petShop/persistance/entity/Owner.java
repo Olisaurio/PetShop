@@ -7,12 +7,12 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "propietario" )
+@Table(name = "cliente" )
 public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_propietario")
+    @Column(name = "cliente_id")
     private int id;
 
     @Column(name = "nombres")
@@ -21,7 +21,7 @@ public class Owner {
     @Column(name = "apellidos")
     private String lastName;
 
-    @Column(name = "correos")
+    @Column(name = "correo")
     private  String email;
 
     @Column(name = "celular")
@@ -32,6 +32,9 @@ public class Owner {
 
     @OneToMany(mappedBy = "Owner")
     private List<Pet> pets;
+
+    @OneToMany(mappedBy = "Owner")
+    private List<Quotes> quotes;
 
 
 }

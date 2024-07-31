@@ -10,12 +10,18 @@ public class Quotes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cita")
-    private Integer id;
+    @Column(name = "cita_id")
+    private int id;
 
-    @Column(name = "fecha")
-    private String date;
+    @Column(name = "cliente_id")
+    private String customerId   ;
+
+    @Column(name = "fecha_cita")
+    private String appointmentDate;
 
 
+    @ManyToOne
+    @JoinColumn(name = "id_propietario")
+    private  Owner Owner;
 
 }

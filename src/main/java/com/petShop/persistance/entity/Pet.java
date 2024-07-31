@@ -24,6 +24,9 @@ public class Pet {
     @Column(name = "genero")
     private String gender;
 
+    @Column(name = "cliente_id")
+    private int clientId;
+
     @ManyToOne
     @JoinColumn(name = "id_propietario")
     private  Owner Owner;
