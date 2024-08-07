@@ -28,7 +28,7 @@ public class Suppliers {
     @Column(name = "direccion")
     private String address;
 
-    @ManyToMany
+
 
 
 }
