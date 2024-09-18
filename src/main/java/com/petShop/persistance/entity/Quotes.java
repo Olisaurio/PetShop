@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "citas" )
+@Table(name = "citas")
 public class Quotes {
 
     @Id
@@ -14,14 +14,13 @@ public class Quotes {
     private int id;
 
     @Column(name = "cliente_id")
-    private String customerId   ;
+    private String customerId;
 
     @Column(name = "fecha_cita")
     private String appointmentDate;
 
-
     @ManyToOne
-    @JoinColumn(name = "id_propietario")
-    private  Owner Owner;
+    @JoinColumn(name = "id_propietario", nullable = false)
+    private Owner owner;
 
 }

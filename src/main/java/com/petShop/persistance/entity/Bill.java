@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "factura" )
+@Table(name = "factura")
 public class Bill {
 
     @Id
@@ -14,11 +14,8 @@ public class Bill {
     private int id;
 
     @Column(name = "cliente_id")
-    private String customerId;
+    private String customerId; // Relacionado con el cliente (Owner)
 
     @Column(name = "monto_total")
     private double totalAmount;
-
-    // Getters and setters
-
 }

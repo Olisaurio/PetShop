@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "cliente" )
+@Table(name = "cliente")
 public class Owner {
 
     @Id
@@ -22,19 +22,17 @@ public class Owner {
     private String lastName;
 
     @Column(name = "correo")
-    private  String email;
+    private String email;
 
     @Column(name = "celular")
-    private String celphoneNumbrer;
+    private String celphoneNumber;
 
     @Column(name = "direccion")
     private String address;
 
-    @OneToMany(mappedBy = "Owner")
-    private List<Pet> pets;
+    @OneToMany(mappedBy = "owner")
+    private List<Pet> pets;  // Relación con las mascotas (Pet)
 
-    @OneToMany(mappedBy = "Owner")
-    private List<Quotes> quotes;
-
-
+    @OneToMany(mappedBy = "owner")
+    private List<Quotes> quotes;  // Relación con las citas (Quotes)
 }

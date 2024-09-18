@@ -5,8 +5,9 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "mascota" )
+@Table(name = "mascota")
 public class Pet {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_mascota")
@@ -25,10 +26,9 @@ public class Pet {
     private String gender;
 
     @Column(name = "cliente_id")
-    private int clientId;
+    private int clientId;  // Representa al propietario (Owner)
 
     @ManyToOne
-    @JoinColumn(name = "id_propietario")
-    private  Owner Owner;
-
+    @JoinColumn(name = "id_propietario", nullable = false)
+    private Owner owner;   // Relación con el propietario
 }
