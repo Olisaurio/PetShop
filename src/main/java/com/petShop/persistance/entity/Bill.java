@@ -18,4 +18,9 @@ public class Bill {
 
     @Column(name = "monto_total")
     private double totalAmount;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private Owner owner;  // Relación Muchos a Uno con Owner (Propietario)
+
 }

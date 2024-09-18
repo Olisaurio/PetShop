@@ -29,6 +29,7 @@ public class Pet {
     private int clientId;  // Representa al propietario (Owner)
 
     @ManyToOne
-    @JoinColumn(name = "id_propietario", nullable = false)
-    private Owner owner;   // Relación con el propietario
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private Owner owner;  // Relación Muchos a Uno con Owner (Propietario)
+
 }

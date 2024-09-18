@@ -21,6 +21,7 @@ public class Quotes {
 
     @ManyToOne
     @JoinColumn(name = "id_propietario", nullable = false)
-    private Owner owner;
+    private Owner owner;  // Relación Muchos a Uno con Owner (Propietario)
+
 
 }

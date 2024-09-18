@@ -31,8 +31,14 @@ public class Owner {
     private String address;
 
     @OneToMany(mappedBy = "owner")
-    private List<Pet> pets;  // Relación con las mascotas (Pet)
+    private List<Pet> pets;  // Relación Uno a Muchos con Pet (Mascota)
+
 
     @OneToMany(mappedBy = "owner")
-    private List<Quotes> quotes;  // Relación con las citas (Quotes)
+    private List<Quotes> quotes;  // Relación Uno a Muchos con Quotes (Citas)
+
+    @OneToMany(mappedBy = "owner")
+    private List<Bill> bills;  // Relación Uno a Muchos con Bill (Factura)
+
+
 }
