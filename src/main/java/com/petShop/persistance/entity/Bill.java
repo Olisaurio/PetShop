@@ -14,7 +14,7 @@ public class Bill {
     private int id;
 
     @Column(name = "cliente_id")
-    private String customerId; // Relacionado con el cliente (Owner)
+    private String customerId;
 
     @Column(name = "monto_total")
     private double totalAmount;
@@ -22,5 +22,4 @@ public class Bill {
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
     private Owner owner;  // Relación Muchos a Uno con Owner (Propietario)
-
 }

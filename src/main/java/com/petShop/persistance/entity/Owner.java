@@ -33,12 +33,9 @@ public class Owner {
     @OneToMany(mappedBy = "owner")
     private List<Pet> pets;  // Relación Uno a Muchos con Pet (Mascota)
 
-
     @OneToMany(mappedBy = "owner")
     private List<Quotes> quotes;  // Relación Uno a Muchos con Quotes (Citas)
 
     @OneToMany(mappedBy = "owner")
     private List<Bill> bills;  // Relación Uno a Muchos con Bill (Factura)
-
-
 }
